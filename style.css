@@ -1,300 +1,282 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.site-title {
-    text-align: center;
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
-
-.main-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-}
-
-.navbar {
+    /* text-align: center; */
+    text-align: left;
+    background-color: #ffcc8e;
+    margin: 0;
+    /* Resets default margin */
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Stack elements vertically */
+    height: 100vh;
 }
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
+td {
+    border: 2px solid #333;
+    height: 15vw;
+    /* Use viewport width to keep cell size responsive */
+    width: 15vw;
+    /* Use viewport width to keep cell size responsive */
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10vw;
+    /* Adjust font size based on viewport width */
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-.nav-link.active {
-    border-bottom: 2px solid white;
+table {
+    border-collapse: collapse;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* This centers the table horizontally without knowing the exact width */
+    top: 50px;
 }
 
-.movies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
+table tr:first-child td {
+    border-top: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:first-child {
+    border-left: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+
+/* Add a media query for smaller screens */
+
+@media (max-width: 600px) {
+    td {
+        height: 20vw;
+        /* Increase size for smaller screens */
+        width: 20vw;
+        font-size: 14vw;
+        /* Increase font size for smaller screens */
+    }
+    .endgame {
+        width: 80%;
+        /* Make endgame overlay take up more width on smaller screens */
+        margin-left: -40%;
+        /* Adjust based on the new width */
+        padding-top: 10px;
+        /* Reduce padding */
+        padding-bottom: 10px;
+        font-size: 5vw;
+        /* Adjust font size for smaller screens */
+    }
+    /* Adjust the top value and font size of the endgame message for smaller screens */
+    .endgame {
+        top: 10%;
+        font-size: 4vw;
+    }
+}
+
+
+/* General styles for the endgame overlay, to make it more responsive */
+
+.endgame {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    /* Fixed at the top */
+    left: 0;
+    right: 0;
+    top: 0;
+    /* Position it at the top */
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Slightly transparent dark background */
+    color: #FFA12B;
+    /* Use the theme orange color for text */
     padding: 20px;
+    /* More padding for a larger display area */
+    text-align: center;
+    /* Center the text inside the banner */
+    font-size: 1.5em;
+    /* Larger text size */
+    font-weight: bold;
+    /* Make the text bold */
+    z-index: 100;
+    /* Make sure it's above all other elements */
+    border-bottom: 4px solid #915100;
+    /* Add a thematic border */
 }
 
-.movie-card {
-    background: #fff;
+.endgame .text {
+    padding: 20px;
+    border: 2px solid #FFA12B;
+    /* Thematic orange border */
+    display: inline-block;
+    /* Only as wide as its content */
+    margin: auto;
+    /* Center in the middle of the page */
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    /* Rounded corners for the text box */
+    box-shadow: 0 0 10px #FFA12B;
+    /* Glowing effect */
 }
 
-.movie-card:hover {
-    transform: translateY(-5px);
+
+/* Additional adjustments for even smaller screens */
+
+@media (max-width: 400px) {
+    td {
+        height: 25vw;
+        /* Further increase size for very small screens */
+        width: 25vw;
+        font-size: 18vw;
+        /* Further increase font size for very small screens */
+    }
 }
 
-.movie-image {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+.game-mode-display {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    font-size: 24px;
+    /* Increased font size */
+    color: #FFA12B;
+    /* Adopting button's text color for consistency */
+    background-color: #2B1800;
+    /* Dark background for contrast */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 #915100;
+    /* Shadow effect to match the button's 'raised' look */
+    font-family: Helvetica, sans-serif;
+    /* Helvetica for a clean look */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 1px 0px #000;
+    /* Text shadow for depth */
 }
 
-.movie-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+.scoreboard {
+    position: absolute;
+    margin-top: 5%;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    font-size: 120%;
+    /* Increased font size */
+    color: #FFA12B;
+    /* Adopting button's text color for consistency */
+    background-color: #2B1800;
+    /* Dark background for contrast */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 #915100;
+    /* Shadow effect to match the button's 'raised' look */
+    font-family: Helvetica, sans-serif;
+    /* Helvetica for a clean look */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 1px 0px #000;
+    /* Text shadow for depth */
 }
 
-.movie-image img:hover {
-    transform: scale(1.05);
+.reset-scoreboard {
+    position: absolute;
+    margin-top: 10%;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    font-size: 120%;
+    /* Increased font size */
+    color: #FFA12B;
+    /* Adopting button's text color for consistency */
+    background-color: #2B1800;
+    /* Dark background for contrast */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 #915100;
+    /* Shadow effect to match the button's 'raised' look */
+    font-family: Helvetica, sans-serif;
+    /* Helvetica for a clean look */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 1px 0px #000;
+    /* Text shadow for depth */
 }
 
-.container {
-    padding: 20px;
+
+/* You might want to add some responsive design features to this element as well */
+
+@media (max-width: 600px) {
+    .game-mode-display {
+        font-size: 0.8em;
+        /* Adjust size for smaller screens */
+        top: 5px;
+        right: 5px;
+    }
 }
 
-.movie-title {
-    font-size: 20px;
-    font-weight: 600;
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align buttons to the start of the flex container (left side) */
+    position: absolute;
+    /* Position the container absolutely to the left */
+    top: 50px;
+    /* Adjust as needed to position vertically */
+    left: 20px;
+    /* Add some space from the left side of the screen */
 }
 
-.movie-release-date {
-    color: #666;
-    font-size: 16px;
-    margin: 5px 0;
-}
 
-.movie-description {
-    color: #666;
-    font-size: 14px;
+/* Continue with the existing styles for .button and .button a */
+
+
+/* Style for the buttons */
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0;
     margin-bottom: 10px;
 }
 
-.movie-link {
-    margin-top: auto;
-    text-align: center;
-}
-
-.movie-link a {
-    display: inline-block;
-    text-decoration: none;
-    color: #333;
-    background: #ddd;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.movie-link a:hover {
-    background: #ccc;
-}
-
-.modal {
-    display: none;
-}
-
-.modal:target {
-    display: flex;
-}
-
-.modal-overlay,
-.modal-close {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.modal-box {
-    z-index: 2;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-state {
-    display: none;
-}
-
-.modal-state:checked+.modal {
-    display: flex;
-}
-
-.modal:target {
-    display: flex;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.modal-box {
-    position: relative;
-    z-index: 20;
-    width: 300px;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    text-decoration: none;
-    font-size: 1.5em;
-    z-index: 30;
-}
-
-.modal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.modal-content {
-    z-index: 3;
-}
-
-.modal-toggle {
-    display: none;
-}
-
-.modal-open {
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px;
-    background: #0056b3;
+.button a {
     color: white;
-    border-radius: 5px;
-}
-
-.modal-toggle:checked+.modal {
-    display: flex;
-}
-
-.modal-toggle:checked+.modal .modal-box {
-    animation: modalIn .35s ease-in-out;
-}
-
-.modal-toggle:checked+.modal-overlay,
-.modal-toggle:checked+label+.modal {
-    display: block;
-}
-
-.modal-toggle:checked+.modal-overlay+.modal .modal-box {
-    animation: modalIn .35s ease-in-out;
-}
-
-@keyframes modalIn {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.tab-content {
-    display: none;
-}
-
-.tab-content:target {
-    display: block;
-}
-
-.news-container {
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-.news-item {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.news-item h3 {
-    color: #333;
-}
-
-.news-item p {
-    color: #666;
-}
-
-.news-mosaic {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.news-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.news-item a {
-    display: block;
-    color: inherit;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
     text-decoration: none;
-}
-
-.news-item img {
-    width: 100%;
+    background-color: #FFA12B;
     display: block;
+    position: relative;
+    text-shadow: 0px 1px 0px #000;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 20px;
 }
 
-.news-item h3 {
-    padding: 10px;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+.button a:active {
+    top: 10px;
+    background-color: #F78900;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    border-radius: 5px;
 }

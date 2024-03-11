@@ -4,305 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nowoczesny Design Filmów</title>
+    <title>Tac Tac Toe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="gameModeDisplay" class="game-mode-display">Current Mode: Human</div>
+    <div class="scoreboard">Current Mode: Human</div>
 
-    <div class="site-title">
-        <h1>Przegląd filmów by Jakub Niewczas</h1>
+    <div id="scoreboard" class="scoreboard">
+        <div>Player O (You): <span id="score-o">0</span></div>
+        <div>Player X (Computer/Player 2): <span id="score-x">0</span></div>
     </div>
 
-    <header class="main-header">
-        <nav class="navbar">
-            <a href="index.html" class="nav-link active">Movies</a>
-            <a href="news.html" class="nav-link">News</a>
-            <a href="about.html" class="nav-link">About</a>
-        </nav>
-    </header>
+    <!-- New reset scoreboard button -->
+    <div class="reset-scoreboard">
+        <div class="button"><a href="#" onclick="resetScoreboard()">Reset Scoreboard</a></div>
+    </div>
 
+    <table>
+        <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+        </tr>
 
-    <main class="movies-grid">
+    </table>
+    <div class="endgame">
+        <div class="text"></div>
+    </div>
 
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://fwcdn.pl/fpo/08/91/500891/7354571.3.jpg" alt="Plakat filmu Incepcja">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Incepcja</h4>
-                <p class="movie-release-date">Data Premiery: 2010-07-16</p>
-                <p class="movie-description">Thriller sci-fi o złodzieju, który włamuje się do umysłów, by kraść sekrety.</p>
-                <div class="movie-link">
-                    <a href="#modal1">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
+    <div class="button-container">
+        <div class="button"><a href="#" onclick="startGame('easy')">Play Against Easy Bot</a></div>
+        <div class="button"><a href="#" onclick="startGame('hard')">Play Against Hard Bot</a></div>
+        <div class="button"><a href="#" onclick="startGame('human')">Play Against Another Player</a></div>
+    </div>
 
-
-        <div id="modal1" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Incepcja</h4>
-                <p>Directed by Christopher Nolan, "Inception" is a sci-fi thriller that explores the mind-bending possibilities of dream manipulation. The film follows Dom Cobb (Leonardo DiCaprio) who is a skilled thief, the absolute best in the dangerous
-                    art of extraction: stealing valuable secrets from deep within the subconscious during the dream state. Cobb's rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him
-                    an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible - inception. Instead of the
-                    perfect heist, Cobb and his team of specialists have to pull off the reverse; their task is not to steal an idea but to plant one. If they succeed, it could be the perfect crime. But no amount of careful planning or expertise can prepare
-                    the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming.</p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="Plakat filmu Interstellar">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Interstellar</h4>
-                <p class="movie-release-date">Data Premiery: 2014-11-07</p>
-                <p class="movie-description">Podróż w przestrzeń kosmiczną w poszukiwaniu nowego domu dla ludzkości.</p>
-                <div class="movie-link">
-
-                    <a href="#modal2">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="modal2" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Interstellar</h4>
-                <p>Directed by Christopher Nolan, "Interstellar" chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an
-                    interstellar voyage. The film explores themes of love, sacrifice, and the survival of humanity. As Earth's future becomes bleak, a bold team led by Cooper (Matthew McConaughey) embarks on a mission through the wormhole to discover
-                    whether mankind has a future among the stars.</p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://m.media-amazon.com/images/I/613ypTLZHsL._AC_UF1000,1000_QL80_.jpg" alt="Plakat filmu Matrix">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Matrix</h4>
-                <p class="movie-release-date">Data Premiery: 1999-03-31</p>
-                <p class="movie-description">Haker komputerowy odkrywa mroczną prawdę o rzeczywistości.</p>
-                <div class="movie-link">
-
-                    <a href="#modal3">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div id="modal3" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Matrix</h4>
-                <p>"Matrix" is a groundbreaking film directed by the Wachowskis that explores a dystopian future in which reality as perceived by most humans is actually a simulated reality called "the Matrix", created by sentient machines to subdue the
-                    human population. The film follows Neo, a computer hacker who learns this truth and joins a group of rebels fighting against the machines. The movie blends philosophy, action, and science fiction in a way that has captivated audiences
-                    around the world.</p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRz_2nKTNlxhVtzbh29kgL3m2ebLv3TlYyzrbyqBtEUxt6mBuZ-" alt="Plakat filmu Pulp Fiction">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Pulp Fiction</h4>
-                <p class="movie-release-date">Data Premiery: 1994-10-14</p>
-                <p class="movie-description">Przemoc i odkupienie w splecionych historiach przestępczego świata Los Angeles.</p>
-                <div class="movie-link">
-
-                    <a href="#modal4">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div id="modal4" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Pulp Fiction</h4>
-                <p>Directed by Quentin Tarantino, "Pulp Fiction" weaves together the intersecting storylines of Los Angeles mobsters, fringe players, small-time criminals, and a mysterious briefcase. The film's unique narrative structure, sharp dialogue,
-                    and blend of humor and violence revolutionized cinematic storytelling, earning it a place as a cult classic. With memorable performances by John Travolta, Uma Thurman, and Samuel L. Jackson, "Pulp Fiction" remains a cornerstone of
-                    1990s cinema.</p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQNgTszE1phYg2G7H4RrgeSEssOw-Kpnh0Si-sF5pVQQrBXJ_6e" alt="Plakat filmu Fight Club">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Fight Club</h4>
-                <p class="movie-release-date">Data Premiery: 1999-10-15</p>
-                <p class="movie-description">Pracownik biurowy i mydlarz tworzą podziemny klub walki.</p>
-                <div class="movie-link">
-
-                    <a href="#modal5">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="modal5" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Fight Club</h4>
-                <p>"Fight Club" is a dark and psychological drama directed by David Fincher, based on the novel by Chuck Palahniuk. The film follows the unnamed protagonist (Edward Norton), a discontented office worker, who forms an underground fight club
-                    with soap salesman Tyler Durden (Brad Pitt). The club evolves into something much more anarchistic and revolutionary. The film explores themes of identity, consumerism, and male camaraderie. "Fight Club" has become a cult classic,
-                    known for its critique of modern society.</p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" alt="Plakat filmu Forrest Gump">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Forrest Gump</h4>
-                <p class="movie-release-date">Data Premiery: 1994-07-06</p>
-                <p class="movie-description">Historia życia niezwykłego mężczyzny o prostym umyśle.</p>
-                <div class="movie-link">
-
-                    <a href="#modal6">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="modal6" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Forrest Gump</h4>
-                <p>"Forrest Gump", directed by Robert Zemeckis and starring Tom Hanks, tells the story of a man with a low IQ who inadvertently becomes involved in some of the most significant events of the 20th century in the United States. The film is
-                    a heartwarming exploration of love, loss, and destiny, showcasing the extraordinary life of an ordinary man. With its memorable quotes and scenes, "Forrest Gump" has earned its place as one of the most beloved films in American cinema.
-                </p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn62uboyqipVxLOSlT4kLb-H99r_Q3Hs_912Ar9peLgCB6ln6a" alt="Plakat filmu Gladiator">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Gladiator</h4>
-                <p class="movie-release-date">Data Premiery: 2000-05-05</p>
-                <p class="movie-description">Zhańbiony rzymski generał staje się gladiatorem, by pomścić morderstwo swojej rodziny.</p>
-                <div class="movie-link">
-                    <a href="#modal7">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="modal7" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Gladiator</h4>
-                <p>Directed by Ridley Scott, "Gladiator" is an epic historical drama that follows Maximus Decimus Meridius, a Roman General who is betrayed and reduced to slavery by Commodus, the corrupt son of the emperor. Maximus rises through the ranks
-                    of the gladiatorial arena to avenge the murders of his family and his emperor. The film is known for its epic scope, intense performances, particularly by Russell Crowe and Joaquin Phoenix, and its powerful soundtrack.</p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuTcvL4wc0fbBjm1h5CRiFEZ2TnNKtu8KtoPSxTsj6mkedHeWl" alt="Plakat filmu Joker">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Joker</h4>
-                <p class="movie-release-date">Data Premiery: 2019-10-04</p>
-                <p class="movie-description">Początki jednego z największych przeciwników Batmana.</p>
-                <div class="movie-link">
-
-                    <a href="#modal8">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="modal8" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Joker</h4>
-                <p>"Joker", directed by Todd Phillips and starring Joaquin Phoenix, offers a new take on the origin story of the iconic Batman villain. Set in Gotham City during the early 1980s, the film follows Arthur Fleck, a failed stand-up comedian who
-                    turns to a life of crime and chaos in Gotham. The film delves deep into the psyche of the character, exploring themes of mental illness, societal neglect, and the creation of a supervillain. Phoenix's performance earned critical acclaim,
-                    making "Joker" a standout film.</p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://contentserver.com.au/assets/600828_p13153578_p_v8_ab.jpg" alt="Plakat filmu Dunkierka">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Dunkierka</h4>
-                <p class="movie-release-date">Data Premiery: 2017-07-21</p>
-                <p class="movie-description">Ewakuacja alianckich wojsk z Dunkierki w 1940 roku.</p>
-                <div class="movie-link">
-
-                    <a href="#modal9">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="modal9" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Dunkirk</h4>
-                <p>Directed by Christopher Nolan, "Dunkirk" is a war film that portrays the Dunkirk evacuation of World War II from three perspectives: land, sea, and air. The film is known for its minimal dialogue, intense realism, and non-linear narrative.
-                    Nolan uses practical effects and IMAX cameras to immerse the audience in the harrowing experience of soldiers, pilots, and civilians involved in the evacuation. "Dunkirk" is praised for its innovative storytelling and technical excellence.
-                </p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-
-
-
-        <div class="movie-card">
-            <div class="movie-image">
-                <img src="https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="Plakat filmu Mad Max: Na drodze gniewu">
-            </div>
-            <div class="container">
-                <h4 class="movie-title">Mad Max: Na drodze gniewu</h4>
-                <p class="movie-release-date">Data Premiery: 2015-05-15</p>
-                <p class="movie-description">Postapokaliptyczna ucieczka przez pustynię.</p>
-                <div class="movie-link">
-
-                    <a href="#modal10">Więcej informacji</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="modal10" class="modal">
-            <div class="modal-box">
-                <h4 class="movie-title">Mad Max: Na drodze gniewu</h4>
-                <p>"Mad Max: Fury Road", directed by George Miller, is a post-apocalyptic action film that is the fourth installment in the Mad Max franchise. The film is set in a desert wasteland where gasoline and water are scarce commodities, following
-                    Max Rockatansky, who joins forces with Imperator Furiosa to flee from cult leader Immortan Joe and his army in an armored tanker truck, leading to a high-speed road war. The film is celebrated for its direction, action sequences, and
-                    visual style.</p>
-                <a href="#!" class="modal-close">&times;</a>
-            </div>
-            <a href="#!" class="modal-overlay"></a>
-        </div>
-    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

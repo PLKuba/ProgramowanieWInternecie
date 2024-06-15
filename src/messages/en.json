@@ -1,0 +1,110 @@
+{
+  "Header": {
+    "top-title": "Experience a little bit of magic",
+    "main-title": "Welcome to my personal portfolio!",
+    "bottom-title": "Hi, I'm Jakub, Backend Engineer from Poland",
+    "button-text": "Who am I?"
+  },
+  "About": {
+    "1": {
+      "title": "I have been an Integration Engineer at PwC for over 2 years",
+      "description": "That involves working with multi-national team. Excellent problem solving and team builing skills"
+    },
+    "2": {
+      "title": "I'm a lead SE at CryptoSearchTools",
+      "description": ""
+    },
+    "3": {
+      "title": "I LOVE Python!",
+      "description": "And those technologies as well :)"
+    },
+    "4": {
+      "title": "In 2025 I will be graduating from Warsaw University of Life Sciences",
+      "description": ""
+    },
+    "5": {
+      "title": "I have completed several major projects.",
+      "description": "Scroll below to give them a glance"
+    },
+    "6": {
+      "title": "Let's get in touch",
+      "description": "Click to see a dope confetti"
+    }
+  },
+  "RecentProjects": {
+    "header_1": "A small selection of",
+    "header_2": "recent projects",
+    "1": {
+      "title": "Logopedy App for Children",
+      "des": "Application that helps children with proper speech development"
+    },
+    "2": {
+      "title": "CryptoSearchTools",
+      "des": "Data aggregation platform for investments funds and venture capitals"
+    },
+    "3": {
+      "title": "Gift app puzzle",
+      "des": "This is a funny gift app for my girlfriend <3"
+    },
+    "4": {
+      "title": "Meeting countdown",
+      "des": "Another fun website which was made as a gift"
+    }
+  },
+  "Testimonials": {
+    "title_1": "Kind words from",
+    "title_2": "satisfied clients",
+    "MajaFedorko": {
+      "name": "Maja Fedorko",
+      "quote": "Jacob is very active and engaged. He reliably performs the tasks assigned to him. He actively participates in team meetings, willingly shares his ideas and acquired knowledge. He demonstrates very high analytical and communication skills. The solutions he delivers are of good quality and are documented.",
+      "title": "Senior IT Manager, Internal-Firm Services, PwC Poland"
+    },
+    "EliasHohl": {
+      "name": "Elias Hohl",
+      "quote": "Since last year, Jakub Niewczas has been working as a junior developer on the Finomena Research Toolkit. I can confirm that his Python skills are way above average for his age. I also like his work attitude; he has been very persistent in his performance and efforts. He has already collected a considerable amount of experience and knows how to independently approach new problems in order to find a solution. Jakub Niewczas is also actively helping newer developers in my team with his knowledge. I enjoy working with him and his help is a notable alleviation for me in these stressful times. I can warmly recommend to accept him for a machine learning focused internship.",
+      "title": "CEO – CryptoSearchTools, Manager & Cybersecurity advisor"
+    }
+  },
+  "Experience": {
+    "1": {
+      "title": "Software Engineer at PwC",
+      "desc": "Developed internal automations and built invoicing tool"
+    },
+    "2": {
+      "title": "Engineering Leader at CryptoSearchTools",
+      "desc": "Designed, Built and Maintained software architecture for investors' tool"
+    },
+    "3": {
+      "title": ".NET engineer at Jeromus",
+      "desc": "Built a social network tool for a local client with a 10 person team"
+    },
+    "4": {
+      "title": "Teacher",
+      "desc": "Teaching kids math and IT after hours :)"
+    }
+  },
+  "Qualities": {
+    "header_1": "My",
+    "header_2": " Top Qualities",
+    "1": {
+      "order": "Fast Learner",
+      "title": "Adaptable and Quick",
+      "des": "I rapidly absorb and implement new concepts, skills, and technologies, thriving in environments that challenge my adaptability."
+    },
+    "2": {
+      "order": "Hard Worker",
+      "title": "Dedicated and Focused",
+      "des": "I commit fully to one task at a time, ensuring high quality and thoroughness by giving 100% attention and dedication until completion."
+    },
+    "3": {
+      "order": "Effective Communicator",
+      "title": "Team Player with Strong Communication",
+      "des": "I excel in collaborative environments, leveraging strong communication skills to foster teamwork and achieve common goals."
+    }
+  },
+  "Footer": {
+    "header_1": "Ready to",
+    "header_2": " discuss details?",
+    "contact_text": "Contact Me"
+  }
+}

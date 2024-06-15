@@ -1,0 +1,110 @@
+{
+  "Header": {
+    "top-title": "Poczuj odrobinę magii",
+    "main-title": "Witaj na moim osobistym portfolio!",
+    "bottom-title": "Cześć, jestem Jakub, inżynier backendowy z Polski",
+    "button-text": "Kim jestem?"
+  },
+  "About": {
+    "1": {
+      "title": "Jestem inżynierem integracji w PwC już ponad 2 lata",
+      "description": "To oznacza pracę z międzynarodowym zespołem. Świetne umiejętności rozwiązywania problemów i budowania zespołu"
+    },
+    "2": {
+      "title": "Jestem głównym inżynierem SE w CryptoSearchTools",
+      "description": "Gdzie tworzę, nie boję się wyzwań!"
+    },
+    "3": {
+      "title": "Uwielbiam Pythona!",
+      "description": "I te technologie również :)"
+    },
+    "4": {
+      "title": "W 2025 roku ukończę Szkołę Główną Gospodarstwa Wiejskiego w Warszawie",
+      "description": "Jestem już prawie na mecie!"
+    },
+    "5": {
+      "title": "Ukończyłem kilka ważnych projektów.",
+      "description": "Przewiń w dół, aby rzucić na nie okiem"
+    },
+    "6": {
+      "title": "Skontaktujmy się",
+      "description": "Kliknij, aby zobaczyć super konfetti"
+    }
+  },
+  "RecentProjects": {
+    "header_1": "Mały wybór",
+    "header_2": "ostatnich projektów",
+    "1": {
+      "title": "Aplikacja Logopedyczna dla Dzieci",
+      "des": "Aplikacja wspomagająca dzieci w prawidłowym rozwoju mowy"
+    },
+    "2": {
+      "title": "CryptoSearchTools",
+      "des": "Platforma agregująca dane dla funduszy inwestycyjnych i venture capitals"
+    },
+    "3": {
+      "title": "Aplikacja-puzzle na prezent",
+      "des": "To zabawna aplikacja-prezent dla mojej dziewczyny <3"
+    },
+    "4": {
+      "title": "Odliczanie do spotkania",
+      "des": "Kolejna zabawna strona internetowa, którą stworzyłem jako prezent"
+    }
+  },
+  "Testimonials": {
+    "title_1": "Miłe słowa od",
+    "title_2": "zadowolonych klientów",
+    "MajaFedorko": {
+      "name": "Maja Fedorko",
+      "quote": "Jakub jest bardzo aktywny i zaangażowany. Niezawodnie wykonuje powierzone mu zadania. Aktywnie uczestniczy w spotkaniach zespołu, chętnie dzieli się swoimi pomysłami i nabytą wiedzą. Wykazuje bardzo wysokie umiejętności analityczne i komunikacyjne. Rozwiązania, które dostarcza, są dobrej jakości i są dokumentowane.",
+      "title": "Starszy Menedżer IT, Usługi Wewnętrzne, PwC Polska"
+    },
+    "EliasHohl": {
+      "name": "Elias Hohl",
+      "quote": "Od ubiegłego roku Jakub Niewczas pracuje jako młodszy programista w zespole Finomena Research Toolkit. Potwierdzam, że jego umiejętności Pythona są znacznie powyżej średniej dla jego wieku. Podoba mi się również jego podejście do pracy; wykazuje dużą wytrwałość w swoich działaniach i wysiłkach. Zebrał już znaczną ilość doświadczenia i potrafi samodzielnie podejść do nowych problemów w celu znalezienia rozwiązania. Jakub Niewczas aktywnie pomaga także nowym programistom w moim zespole swoją wiedzą. Przyjemnie się z nim współpracuje, a jego pomoc znacząco łagodzi stres w tych trudnych czasach. Gorąco polecam przyjęcie go na staż skoncentrowany na uczeniu maszynowym.",
+      "title": "CEO – CryptoSearchTools, Menedżer & doradca ds. cyberbezpieczeństwa"
+    }
+  },
+  "Experience": {
+    "1": {
+      "title": "Inżynier oprogramowania w PwC",
+      "desc": "Rozwijałem wewnętrzne automatyzacje i budowałem narzędzie do fakturowania"
+    },
+    "2": {
+      "title": "Lider inżynieryjny w CryptoSearchTools",
+      "desc": "Projektowałem, budowałem i utrzymywałem architekturę oprogramowania dla narzędzia inwestorów"
+    },
+    "3": {
+      "title": "Inżynier .NET w Jeromus",
+      "desc": "Budowałem narzędzie społecznościowe dla lokalnego klienta z zespołem 10 osób"
+    },
+    "4": {
+      "title": "Nauczyciel",
+      "desc": "Uczę dzieci matematyki i informatyki po godzinach :)"
+    }
+  },
+  "Qualities": {
+    "header_1": "Moje",
+    "header_2": " Najlepsze cechy",
+    "1": {
+      "order": "Szybki uczeń",
+      "title": "Zdolny i szybki",
+      "des": "Szybko przyswajam i wdrażam nowe koncepcje, umiejętności i technologie, doskonale radząc sobie w środowiskach, które stanowią dla mnie wyzwanie."
+    },
+    "2": {
+      "order": "Ciężki pracownik",
+      "title": "Oddany i skupiony",
+      "des": "Poświęcam się całkowicie jednemu zadaniu na raz, gwarantując wysoką jakość i dokładność, dając 100% uwagi i zaangażowania aż do zakończenia."
+    },
+    "3": {
+      "order": "Skuteczny komunikator",
+      "title": "Gracz zespołowy ze silnymi umiejętnościami komunikacyjnymi",
+      "des": "Doskonale radzę sobie w środowiskach współpracy, wykorzystując silne umiejętności komunikacyjne, aby wspierać pracę zespołową i osiągać wspólne cele."
+    }
+  },
+  "Footer": {
+    "header_1": "Gotowy do",
+    "header_2": " omówienia szczegółów?",
+    "contact_text": "Skontaktuj się ze mną"
+  }
+}

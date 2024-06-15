@@ -1,51 +1,45 @@
 {
-  "name": "rwd_spa",
+  "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://plkuba.github.io/ProgramowanieWInternecie",
   "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-brands-svg-icons": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.3.3",
-    "font-awesome": "^4.7.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "react-spring": "^9.7.3",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@react-three/drei": "^9.106.0",
+    "@react-three/fiber": "^8.16.8",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
+    "i18next": "^23.11.5",
+    "i18next-resources-to-backend": "^1.2.1",
+    "mini-svg-data-uri": "^1.4.4",
+    "next": "14.2.3",
+    "next-i18n-router": "^5.5.0",
+    "next-i18next": "^15.3.0",
+    "next-intl": "^3.15.0",
+    "next-themes": "^0.3.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-i18next": "^14.1.2",
+    "react-icons": "^5.2.1",
+    "react-lottie": "^1.2.4",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.165.0",
+    "three-globe": "^2.31.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-lottie": "^1.2.10",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
